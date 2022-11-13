@@ -15,6 +15,7 @@ body {
   background-color: #07031E;
   background-image: url('/assets/images/home/home-bg.svg');
   background-size: cover;
+  background-repeat: no-repeat;
 
   @include media-breakpoint-down(sm) {
     background-image: none;
@@ -89,6 +90,14 @@ body {
 .user-select-none {
   * {
     user-select: none;
+  }
+}
+
+.section-divider {
+  padding: 60px 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 30px 0;
   }
 }
 
