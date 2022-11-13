@@ -1,0 +1,142 @@
+@import '../assets/scss/custom-breakpoints.scss';
+@import '~bootstrap/scss/bootstrap-grid';
+
+#wrapper {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  grid-template-columns: 300px 1fr;
+
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: 250px 1fr;
+  }
+
+  header {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  main {
+    @include media-breakpoint-down(md) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
+
+  aside {
+    @include media-breakpoint-down(md) {
+      position: fixed;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+      z-index: 999;
+    }
+
+    app-sidebar {
+      position: fixed;
+      width: 300px;
+      height: calc(100vh - 71px);
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      transition: .3s;
+
+      @include media-breakpoint-down(xl) {
+        width: 250px;
+      }
+
+      @include media-breakpoint-down(md) {
+        transform: translateX(-100%);
+        background: #07031e;
+        height: 100vh;
+      }
+    }
+
+    &.active {
+      @include media-breakpoint-down(md) {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      app-sidebar {
+        @include media-breakpoint-down(md) {
+          transform: translateX(0%);
+        }
+      }
+    }
+  }
+}
+
+/*
+#wrapper {
+  display: flex;
+  height: 100%;
+  overflow-x: hidden;
+
+  main {
+    background-color: #fff;
+    width: 100%;
+    margin-left: 280px;
+    transition: margin-left .3s ease-in-out;
+
+    &.sidebar-is-open {
+      margin-left: 70px;
+    }
+  }
+}
+
+.sidebar-container {
+  width: 280px;
+  position: fixed;
+  // position: relative;
+  transition: all ease-in-out 0.3s;
+  left: 0;
+  z-index: 99999;
+  // transform: translateX(-300px);
+  height: 100%;
+
+  &.detail-is-open {
+    left: 0;
+  }
+
+  &.active {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  #wrapper {
+    main {
+      margin-left: 0px;
+
+      &.sidebar-is-open {
+        margin-left: 70px;
+      }
+    }
+  }
+  .view-container {
+    width: calc(100%);
+  }
+
+  .sidebar-container {
+    width: 0px;
+
+    &.active {
+      width: 70px;
+    }
+    // transform: translateX(0);
+  }
+
+  .sidebar-mask.active {
+    left: 0;
+    display: block;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #00000099;
+    z-index: 9999;
+    position: fixed;
+    user-select: none;
+    transition: .3s;
+  }
+}
+*/

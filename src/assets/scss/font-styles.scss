@@ -1,0 +1,72 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+body {
+  color: #fff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 29px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.title {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Debug-Free-Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 75px;
+  line-height: 67px;
+  color: #FFFFFF;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 55px;
+    line-height: 40px;
+  }
+}
+
+// h3 {
+//   font-size: 24px;
+//   line-height: 28px;
+//   margin-top: 20px;
+//   margin-bottom: 10px;
+
+  // @include media-breakpoint-down(sm) {
+  //   font-size: 16px !important;
+  //   line-height: 19px !important;
+  // }
+// }
+
+.text-bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.component-title {
+  margin-bottom: 80px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 30px;
+  }
+}

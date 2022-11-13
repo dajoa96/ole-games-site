@@ -1,0 +1,17 @@
+.app-home-online-games {
+  position: relative;
+  .game-list {
+    row-gap: 30px;
+
+    .game-item {
+      .game-card {
+        padding: 20px;
+        background-color: #1A1039;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

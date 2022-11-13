@@ -1,0 +1,31 @@
+.app-regular-switch {
+    .switch {
+        width: 55px;
+        height: 28px;
+        padding: 4px;
+        border-radius: 20px;
+        background-color: #959595;
+        position: relative;
+        transition: .3s;
+        cursor: pointer;
+
+        &.active {
+            background-color: #252525;
+
+            .switch__toggler {
+                transform: translateX(30px);
+            }
+        }
+
+        .switch__toggler {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            transition: .3s;
+            transform: translateX(5px);
+        }
+    }
+}

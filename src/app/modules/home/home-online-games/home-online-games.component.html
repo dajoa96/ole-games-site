@@ -1,0 +1,17 @@
+<section class="app-home-online-games">
+  <div class="container">
+    <div class="component-title text-center">
+      <h2 class="title">
+        Juegos en Linea
+      </h2>
+      <p class="my-0">Aquí aparecerán las estadísticas próximamente</p>
+    </div>
+    <div class="row m-0 game-list">
+      <div class="col-md-6 col-lg-4 game-item" *ngFor="let game of games">
+        <div class="game-card">
+          <img [src]="'/' + game.image" alt="" class="img-fluid game-card__image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

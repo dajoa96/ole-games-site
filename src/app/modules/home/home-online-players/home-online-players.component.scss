@@ -1,0 +1,177 @@
+@import 'src/assets/scss/custom-breakpoints.scss';
+@import '~bootstrap/scss/bootstrap-grid';
+
+.app-online-players {
+  position: relative;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+
+    @include media-breakpoint-down(xl) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr;
+    }
+
+    .left-side {
+      .grid-card {
+        @include media-breakpoint-up(xl) {
+          padding: 120px 30px;
+          flex-direction: row;
+        }
+
+        .grid-card__image {
+          @include media-breakpoint-up(xl) {
+            max-width: 280px;
+          }
+        }
+
+        .grid-card__content {
+          @include media-breakpoint-up(xl) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            gap: 25px;
+          }
+
+          .grid-card__paraph,
+          .grid-card__title {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+          }
+
+          .grid-card__paraph {
+            @include media-breakpoint-up(xl) {
+              font-size: 35px;
+              line-height: 41px;
+            }
+          }
+
+          .grid-card__title {
+            @include media-breakpoint-up(xl) {
+              font-size: 55px;
+              line-height: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    .right-side {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 30px;
+
+      .members-grid,
+      .members-grid {
+        position: relative;
+      }
+
+      .grid-card {
+        padding: 30px;
+
+        @include media-breakpoint-up(xl) {
+          position: absolute;
+          padding: 10px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .grid-card__wrapper {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          overflow-y: auto;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+
+          .grid-card__image {
+            max-width: 150px;
+          }
+
+          .grid-card__content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            gap: 5px;
+
+            .grid-card__paraph,
+            .grid-card__title {
+              width: 100%;
+              margin: 0;
+              text-align: center;
+            }
+
+            .grid-card__paraph {
+              font-size: 17px;
+              line-height: 19px;
+            }
+
+            .grid-card__title {
+              font-size: 35px;
+              line-height: 31px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .grid-card {
+    display: flex;
+    padding: 30px;
+    background-color: #1A1039;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+
+    .grid-card__image {
+      max-width: 150px;
+    }
+
+    .grid-card__content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      gap: 5px;
+
+      .grid-card__paraph,
+      .grid-card__title {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+      }
+
+      .grid-card__paraph {
+        font-size: 17px;
+        line-height: 19px;
+      }
+
+      .grid-card__title {
+        font-size: 35px;
+        line-height: 31px;
+      }
+    }
+  }
+}
