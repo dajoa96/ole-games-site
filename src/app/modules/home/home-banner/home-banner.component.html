@@ -9,7 +9,7 @@
         <p class="plataforma">¡La plataforma NFT que estabas esperando!</p>
       </div>
     </div>
-    <div class="social-media">
+    <div class="social-media" [ngClass]="{ 'active': displaySocialLink }">
       <a class="social-media__item" href="#" target="_blank">
         <i class="fa-regular fa-paper-plane social-media__icon"></i>
         <div class="social-media__badge">
@@ -38,5 +38,12 @@
         <i class="fa-brands fa-instagram social-media__icon"></i>
       </a>
     </div>
+    <a
+      class="social-media__item social-media__toggler"
+      (click)="displaySocialLink = !displaySocialLink"
+      [ngClass]="{ 'social-media__icon-active': displaySocialLink }"
+    >
+      <i class="fa-solid fa-plus social-media__icon"></i>
+    </a>
   </div>
 </section>

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-banner.component.scss']
 })
 export class HomeBannerComponent implements OnInit {
+  displaySocialLink: boolean = false;
 
   constructor() { }
 

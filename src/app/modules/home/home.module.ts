@@ -9,6 +9,7 @@ import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeOnlinePlayersComponent } from './home-online-players/home-online-players.component';
 import { HomeOnlineGamesComponent } from './home-online-games/home-online-games.component';
 import { HomeBeginComponent } from './home-begin/home-begin.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { HomeBeginComponent } from './home-begin/home-begin.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
+    NgbModule
   ],
   exports: [
     SafeIframeUrlPipe

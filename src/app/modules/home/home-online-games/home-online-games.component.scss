@@ -5,12 +5,19 @@
 
     .game-item {
       .game-card {
+        cursor: pointer;
         padding: 20px;
         background-color: #1A1039;
         display: flex;
         height: 100%;
         align-items: center;
         justify-content: center;
+        transition: .3s;
+
+        &:hover,
+        &:active {
+          background-color: #6538e7;
+        }
       }
     }
   }
