@@ -1,33 +1,41 @@
 <section class="app-tournaments">
   <div class="container">
-    <div class="component-title">
-      <h1 class="title">Torneos</h1>
-      <p class="intro-paraph">
-        Los torneos semanales están pensados para dar una opción extra a todos los jugadores de cada juego para conseguir premios aunque hayan perdido. Por el momento, los torneos están deshabilitados. Muy pronto podrás apuntarte a ellos.
-      </p>
-    </div>
-    <swiper class="swiper-padding" [config]="config" *ngIf="tournaments && tournaments.length > 0">
-      <ng-template swiperSlide *ngFor="let tournament of tournaments | slice:0:5">
-        <div class="tournament-card">
-          <img [src]="tournament.image" [alt]="tournament.title" class="img-fluid">
-          <h2>{{tournament.title}}</h2>
-          <p>{{tournament.date}}</p>
-        </div>
-      </ng-template>
-    </swiper>
-    <div class="next-tournaments">
-      <h2 class="title">
-        Proximos Torneos
-      </h2>
-      <div class="tournaments__list" *ngIf="tournaments && tournaments.length > 0">
-        <ng-container *ngFor="let tournament of tournaments">
-          <app-tournament-card [data]="tournament"></app-tournament-card>
-        </ng-container>
+    <div class="section-divider">
+      <div class="component-title">
+        <h1 class="title">Torneos</h1>
+        <p class="intro-paraph">
+          Los torneos semanales están pensados para dar una opción extra a todos los jugadores de cada juego para conseguir premios aunque hayan perdido. Por el momento, los torneos están deshabilitados. Muy pronto podrás apuntarte a ellos.
+        </p>
       </div>
-      <div class="tournaments__list" *ngIf="!tournaments || tournaments.length <= 0">
-        <h3 class="title text-center">
-          No Hay Torneos!
-        </h3>
+      <div class="grid-container">
+        <swiper class="swiper-element" [config]="config" *ngIf="tournaments && tournaments.length > 0">
+          <ng-template swiperSlide *ngFor="let tournament of tournaments | slice:0:5">
+            <div class="tournament-card">
+              <img [src]="tournament.image" [alt]="tournament.title" class="img-fluid">
+              <div class="tournament-data">
+                <h2>{{tournament.title}}</h2>
+                <p>{{tournament.date}}</p>
+              </div>
+            </div>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+    <div class="section-divider">
+      <div class="next-tournaments">
+        <h2 class="title">
+          Proximos Torneos
+        </h2>
+        <div class="tournaments__list" *ngIf="tournaments && tournaments.length > 0">
+          <ng-container *ngFor="let tournament of tournaments">
+            <app-tournament-card [data]="tournament"></app-tournament-card>
+          </ng-container>
+        </div>
+        <div class="tournaments__list" *ngIf="!tournaments || tournaments.length <= 0">
+          <h3 class="title text-center">
+            No Hay Torneos!
+          </h3>
+        </div>
       </div>
     </div>
   </div>

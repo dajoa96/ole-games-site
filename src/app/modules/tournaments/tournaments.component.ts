@@ -10,10 +10,17 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectCards]);
 })
 export class TournamentsComponent implements OnInit {
   config: SwiperOptions = {
-    slidesPerView: 1.25,
-    spaceBetween: 30
+    slidesPerView: 1.1,
+    spaceBetween: 15,
+    resizeObserver: true,
+    breakpoints: {
+      912: {
+        slidesPerView: 1.3,
+        spaceBetween: 30,
+        resizeObserver: true,
+      }
+    }
   }
-
   tournaments: any[] = [
     {
       image: '/assets/images/tournaments/tournament-banner-01.png',

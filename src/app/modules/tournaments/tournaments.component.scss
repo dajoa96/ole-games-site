@@ -2,10 +2,59 @@
 @import '~bootstrap/scss/bootstrap-grid';
 
 .app-tournaments {
-  margin: 90px 0;
+  .grid-container {
+    display: grid;
 
-  @include media-breakpoint-down(lg) {
-    margin: 50px 0;
+    .swiper-element {
+      max-width: 100%;
+    }
+  }
+
+  .tournament-card {
+    background-color: #1A1039;
+    padding: 30px;
+
+    @include media-breakpoint-down(xl) {
+      padding: 15px;
+    }
+
+    .tournament-data {
+      text-align: center;
+      margin-top: 30px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 15px;
+      }
+
+      h2 {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: #FFFFFF;
+        margin-bottom: 5px;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 25px;
+          line-height: 25px;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
   }
 
   .next-tournaments {
