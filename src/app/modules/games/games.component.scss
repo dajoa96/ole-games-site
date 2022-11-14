@@ -1,0 +1,20 @@
+@import 'src/assets/scss/custom-breakpoints.scss';
+@import '~bootstrap/scss/bootstrap-grid';
+
+.app-games {
+  margin-top: 90px;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 50px;
+  }
+
+  .section-divider {
+    padding-top: 80px;
+  }
+
+  .row {
+    @include media-breakpoint-down(sm) {
+      row-gap: 85px;
+    }
+  }
+}

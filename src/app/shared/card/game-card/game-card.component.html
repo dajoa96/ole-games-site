@@ -1,0 +1,16 @@
+<div class="game-card">
+  <div class="game-card__icon">
+    <img [src]="data?.icon || ''" [alt]="data?.name || 'Game Icon'" class="img-fluid">
+  </div>
+  <div class="game-card__image">
+    <img [src]="data?.image || ''" [alt]="data?.name || 'Game Image'" class="img-fluid">
+  </div>
+  <div class="game-card__description">
+    <p>
+      {{data?.description}}
+    </p>
+  </div>
+  <a [href]="data?.link || '#'" target="_blank" class="btn primary mx-auto" rel="noopener noreferrer" (click)="$event.preventDefault()">
+    Jugar
+  </a>
+</div>

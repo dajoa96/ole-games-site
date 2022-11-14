@@ -14,6 +14,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { ApiService } from '../services/api.service';
 import { QRCodeModule } from 'angularx-qrcode';
 import { RegularSwitchComponent } from './switch/regular-switch/regular-switch.component';
+import { GameCardComponent } from './card/game-card/game-card.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { RegularSwitchComponent } from './switch/regular-switch/regular-switch.c
     TruncateStringPipe,
     CopyClipboardDirective,
     RegularSwitchComponent,
+    GameCardComponent,
   ],
   imports: [
     CommonModule,
@@ -44,6 +46,7 @@ import { RegularSwitchComponent } from './switch/regular-switch/regular-switch.c
     TruncateStringPipe,
     CopyClipboardDirective,
     RegularSwitchComponent,
+    GameCardComponent,
   ],
   providers: [
     ApiService,

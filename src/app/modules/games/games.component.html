@@ -1,1 +1,14 @@
-<p>games works!</p>
+<section class="app-games">
+  <div class="container">
+    <h1 class="title">Elije Tu Juego</h1>
+    <div class="section-divider">
+      <div class="row m-0">
+        <ng-container *ngIf="games && games.length">
+          <div class="col-md-6" *ngFor="let game of games">
+            <app-game-card [data]="game"></app-game-card>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>
