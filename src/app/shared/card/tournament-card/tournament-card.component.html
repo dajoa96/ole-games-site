@@ -1,0 +1,15 @@
+<div class="app-tournament-card">
+  <div class="card__image">
+    <img [src]="data?.image || noImage" [alt]="data?.title" class="img-fluid">
+  </div>
+  <div class="card__title">
+    <h3 class="card__title-title">{{data?.title}}</h3>
+    <p class="card__title-date">{{data?.date}}</p>
+  </div>
+  <div class="card__quotas">
+    <div class="quotas">
+      <div class="number">{{data?.quotas}}</div>
+      <div class="cupos">Cupos</div>
+    </div>
+  </div>
+</div>

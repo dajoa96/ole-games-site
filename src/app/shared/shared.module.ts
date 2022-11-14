@@ -15,6 +15,7 @@ import { ApiService } from '../services/api.service';
 import { QRCodeModule } from 'angularx-qrcode';
 import { RegularSwitchComponent } from './switch/regular-switch/regular-switch.component';
 import { GameCardComponent } from './card/game-card/game-card.component';
+import { TournamentCardComponent } from './card/tournament-card/tournament-card.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { GameCardComponent } from './card/game-card/game-card.component';
     CopyClipboardDirective,
     RegularSwitchComponent,
     GameCardComponent,
+    TournamentCardComponent,
   ],
   imports: [
     CommonModule,
@@ -47,6 +49,7 @@ import { GameCardComponent } from './card/game-card/game-card.component';
     CopyClipboardDirective,
     RegularSwitchComponent,
     GameCardComponent,
+    TournamentCardComponent,
   ],
   providers: [
     ApiService,
