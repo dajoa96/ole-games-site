@@ -1,1 +1,86 @@
-<p>contact works!</p>
+<section class="app-contact">
+  <div class="container">
+    <div class="section-divider">
+      <h1>Contáctanos</h1>
+      <p>¿Quieres hacernos una sugerencia o simplemente decirnos algo?</p>
+    </div>
+    <div class="grid-container">
+      <div class="left-item">
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Nombre">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="10" placeholder="Mensaje"></textarea>
+          </div>
+          <button type="button" class="btn primary mx-auto">Enviar</button>
+        </form>
+      </div>
+      <div class="right-item">
+        <div class="email-data">
+          <i class="fa-solid fa-envelope icon"></i>
+          <div class="content">
+            <h2>Información General</h2>
+            <p>Información</p>
+            <h3>Soporte</h3>
+            <p class="mb-0">Soporte</p>
+          </div>
+        </div>
+        <div class="email-data">
+          <i class="fa-solid fa-envelope icon"></i>
+          <div class="content">
+            <h2>Envía tus Peticiones</h2>
+            <p>Encuestas</p>
+            <h3>Trabaja con Nosotros</h3>
+            <p class="mb-0">Empleo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider">
+      <h2>Nuestro Equipo</h2>
+      <p>Conoce a las personas detrás de OleGames.io</p>
+      <div class="personel-list" *ngIf="personel && personel.length > 0">
+        <div class="row">
+          <div class="col-sm-6 col-lg-4" *ngFor="let item of personel">
+            <app-personel-card [data]="item"></app-personel-card>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider">
+      <div class="social-media">
+        <a class="social-media__item" href="#" target="_blank">
+          <i class="fa-regular fa-paper-plane social-media__icon"></i>
+          <div class="social-media__badge">
+            En
+          </div>
+        </a>
+        <a class="social-media__item" href="#" target="_blank">
+          <i class="fa-regular fa-paper-plane social-media__icon"></i>
+          <div class="social-media__badge">
+            Es
+          </div>
+        </a>
+        <a class="social-media__item" href="#" target="_blank">
+          <i class="fa-brands fa-twitter social-media__icon"></i>
+        </a>
+        <a class="social-media__item" href="#" target="_blank">
+          <i class="fa-brands fa-discord social-media__icon"></i>
+        </a>
+        <a class="social-media__item" href="#" target="_blank">
+          <i class="fa-brands fa-facebook social-media__icon"></i>
+        </a>
+        <a class="social-media__item" href="#" target="_blank">
+          <i class="fa-regular fa-paper-plane social-media__icon"></i>
+        </a>
+        <a class="social-media__item" href="#" target="_blank">
+          <i class="fa-brands fa-instagram social-media__icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

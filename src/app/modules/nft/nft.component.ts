@@ -12,4 +12,8 @@ export class NftComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSearchHandler(e: any) {
+    console.log('new term', e);
+  }
+
 }

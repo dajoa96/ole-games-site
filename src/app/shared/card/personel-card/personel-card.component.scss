@@ -1,0 +1,49 @@
+.peronel-card {
+  position: relative;
+  background-color: #1A1039;
+  border-radius: 20px;
+  padding: 60px;
+  padding-top: 140px;
+  transition: .3s;
+
+  &:hover {
+    background-color: #6538E7;
+  }
+
+  .card__image {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 145px;
+    height: 145px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  p {
+    text-align: center;
+    margin: 0;
+  }
+
+  .card__name {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+  }
+
+  .card__position {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: #FFFFFF;
+  }
+}

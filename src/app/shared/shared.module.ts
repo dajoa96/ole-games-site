@@ -16,6 +16,8 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { RegularSwitchComponent } from './switch/regular-switch/regular-switch.component';
 import { GameCardComponent } from './card/game-card/game-card.component';
 import { TournamentCardComponent } from './card/tournament-card/tournament-card.component';
+import { PersonelCardComponent } from './card/personel-card/personel-card.component';
+import { SearchFilterComponent } from './search/search-filter/search-filter.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { TournamentCardComponent } from './card/tournament-card/tournament-card.
     RegularSwitchComponent,
     GameCardComponent,
     TournamentCardComponent,
+    PersonelCardComponent,
+    SearchFilterComponent,
   ],
   imports: [
     CommonModule,
@@ -50,6 +54,8 @@ import { TournamentCardComponent } from './card/tournament-card/tournament-card.
     RegularSwitchComponent,
     GameCardComponent,
     TournamentCardComponent,
+    PersonelCardComponent,
+    SearchFilterComponent,
   ],
   providers: [
     ApiService,

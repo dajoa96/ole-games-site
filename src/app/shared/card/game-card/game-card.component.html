@@ -1,9 +1,9 @@
 <div class="game-card">
   <div class="game-card__icon">
-    <img [src]="data?.icon || ''" [alt]="data?.name || 'Game Icon'" class="img-fluid">
+    <img [src]="data?.icon || noImage" [alt]="data?.name || 'Game Icon'" class="img-fluid">
   </div>
   <div class="game-card__image">
-    <img [src]="data?.image || ''" [alt]="data?.name || 'Game Image'" class="img-fluid">
+    <img [src]="data?.image || noImage" [alt]="data?.name || 'Game Image'" class="img-fluid">
   </div>
   <div class="game-card__description">
     <p>

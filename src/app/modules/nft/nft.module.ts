@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { NftRoutingModule } from './nft-routing.module';
 import { NftComponent } from './nft.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { NftComponent } from './nft.component';
   ],
   imports: [
     CommonModule,
-    NftRoutingModule
+    NftRoutingModule,
+    SharedModule
   ]
 })
 export class NftModule { }

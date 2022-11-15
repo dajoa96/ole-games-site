@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GameCardComponent implements OnInit {
   @Input('data') data: any;
+  noImage: string = '/assets/images/no-image-available.jpg';
 
   constructor() { }
 

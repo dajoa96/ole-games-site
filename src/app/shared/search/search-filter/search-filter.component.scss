@@ -1,0 +1,53 @@
+@import 'src/assets/scss/custom-breakpoints.scss';
+@import '~bootstrap/scss/bootstrap-grid';
+
+.search-box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: end;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
+  .form-control {
+    border-radius: 50px;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    text-transform: none;
+    padding: 13px 40px;
+    border: 0;
+    height: 100%;
+    max-width: 625px;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 13px 25px;
+    }
+  }
+
+  .dropdown {
+    .dropdown-toggle {
+      padding: 13px 40px;
+
+      z-index: 99;
+      position: relative;
+    }
+
+    .dropdown-menu {
+      left: 50%!important;
+      transform: translate(-50%, -10px)!important;
+      z-index: 9;
+      padding-top: 70px;
+      border-radius: 35px 35px;
+      width: 195px;
+      overflow: hidden;
+    }
+  }
+}

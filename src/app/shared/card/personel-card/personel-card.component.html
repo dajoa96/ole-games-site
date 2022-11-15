@@ -1,0 +1,11 @@
+<div class="peronel-card">
+  <div class="card__image">
+    <img [src]="data?.picture || noImage" [alt]="data?.name || 'Personel Picture'" class="img-fluid">
+  </div>
+  <div class="card__name">
+    <p>{{data?.name}}</p>
+  </div>
+  <div class="card__position">
+    <p>{{data?.position}}</p>
+  </div>
+</div>
