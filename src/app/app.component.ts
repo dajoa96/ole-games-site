@@ -27,5 +27,9 @@ export class AppComponent implements OnInit {
 
   }
 
+  closeSidebar(): void {
+    this.sidebarService.open.next(false);
+  }
+
 }
 

@@ -2,7 +2,7 @@
   <header [ngClass]="{'blur-5 user-select-none': sidebarIsOpen, 'detail-is-open': detailIsOpen}">
     <app-header></app-header>
   </header>
-  <aside [ngClass]="{'active': sidebarIsOpen, 'detail-is-open': detailIsOpen}">
+  <aside [ngClass]="{'active': sidebarIsOpen, 'detail-is-open': detailIsOpen}" (click)="closeSidebar()">
     <app-sidebar></app-sidebar>
     <div class="sidebar-container" [ngClass]="{'active': sidebarIsOpen, 'detail-is-open': detailIsOpen}">
     </div>
@@ -20,27 +20,3 @@
   </div>
 </div>
 <app-toasts></app-toasts>
-<!--
-
-<div id="wrapper">
-  <header>
-    <div class="sidebar-container" [ngClass]="{'active': sidebarIsOpen, 'detail-is-open': detailIsOpen}">
-      <app-sidebar></app-sidebar>
-    </div>
-  </header>
-  <main [ngClass]="{ 'sidebar-is-open': sidebarIsOpen }">
-    <div id="page" class="clearfix">
-      <app-header></app-header>
-      <router-outlet></router-outlet>
-      <app-toasts></app-toasts>
-    </div>
-    <app-footer></app-footer>
-  </main>
-  <div class="loader" *ngIf="loader">
-    <div class="loader-wrapper">
-      <img src="/assets/images/logo.png">
-      <h3>Loading...</h3>
-    </div>
-  </div>
-</div>
--->
