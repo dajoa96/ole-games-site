@@ -6,7 +6,7 @@ export const environment: any = {
   production: false,
   env: 'dev',
   api: {
-    url: "https://linen-analyst-363013.uc.r.appspot.com/api",
+    url: "",
   }
 };
 
