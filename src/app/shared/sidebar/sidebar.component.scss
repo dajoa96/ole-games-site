@@ -16,13 +16,14 @@
       }
 
       @include media-breakpoint-down(lg) {
-        top: 13px;
+        // top: 13px;
         width: 190px;
         left: 30px;
       }
 
       @include media-breakpoint-down(md) {
         left: 10px;
+        top: 13px;
       }
     }
 
