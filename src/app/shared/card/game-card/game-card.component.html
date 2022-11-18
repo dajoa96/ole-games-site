@@ -3,14 +3,19 @@
     <img [src]="data?.icon || noImage" [alt]="data?.name || 'Game Icon'" class="img-fluid">
   </div>
   <div class="game-card__image">
-    <img [src]="data?.image || noImage" [alt]="data?.name || 'Game Image'" class="img-fluid">
+    <ng-container *ngIf="data?.isVideo">
+      <iframe [src]="clearUrl(data?.videoLink)" [title]="data?.name || 'Video'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ng-container>
+    <ng-container *ngIf="!data?.isVideo">
+      <img [src]="data?.image || noImage" [alt]="data?.name || 'Game Image'" class="img-fluid">
+    </ng-container>
   </div>
   <div class="game-card__description">
     <p>
       {{data?.description}}
     </p>
   </div>
-  <a [href]="data?.link || '#'" target="_blank" class="btn primary mx-auto" rel="noopener noreferrer" (click)="$event.preventDefault()">
+  <a [href]="data?.link || '#'" target="_blank" class="btn primary mx-auto buy-btn" rel="noopener noreferrer" (click)="$event.preventDefault()">
     Jugar
   </a>
 </div>

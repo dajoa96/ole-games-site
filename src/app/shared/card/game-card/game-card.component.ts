@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-game-card',
@@ -9,9 +10,15 @@ export class GameCardComponent implements OnInit {
   @Input('data') data: any;
   noImage: string = '/assets/images/no-image-available.jpg';
 
-  constructor() { }
+  constructor(
+    private domSanitizer: DomSanitizer
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  clearUrl(url: string): SafeResourceUrl {
+    return this.domSanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
 }

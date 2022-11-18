@@ -7,6 +7,12 @@
   padding: 30px;
   padding-top: 80px;
   height: 100%;
+  display: grid;
+
+  @include media-breakpoint-down(lg) {
+    padding: 20px;
+    padding-top: 80px;
+  }
 
   img {
     width: 100%;
@@ -31,7 +37,14 @@
     text-align: center;
     height: 292px;
 
-    img {
+    @include media-breakpoint-down(lg) {
+      height: 192px;
+    }
+
+    img,
+    iframe {
+      height: 100%;
+      width: 100%;
       object-fit: cover;
     }
   }
@@ -48,5 +61,10 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  .buy-btn {
+    height: max-content;
+    align-self: end;
   }
 }
