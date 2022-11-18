@@ -18,6 +18,7 @@ import { GameCardComponent } from './card/game-card/game-card.component';
 import { TournamentCardComponent } from './card/tournament-card/tournament-card.component';
 import { PersonelCardComponent } from './card/personel-card/personel-card.component';
 import { SearchFilterComponent } from './search/search-filter/search-filter.component';
+import { NftCardComponent } from './card/nft-card/nft-card.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SearchFilterComponent } from './search/search-filter/search-filter.comp
     TournamentCardComponent,
     PersonelCardComponent,
     SearchFilterComponent,
+    NftCardComponent,
   ],
   imports: [
     CommonModule,
@@ -56,6 +58,7 @@ import { SearchFilterComponent } from './search/search-filter/search-filter.comp
     TournamentCardComponent,
     PersonelCardComponent,
     SearchFilterComponent,
+    NftCardComponent,
   ],
   providers: [
     ApiService,
