@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-games',
@@ -23,9 +24,12 @@ export class GamesComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private titleService: Title
+  ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Ole Games - Juegos');
   }
 
 }

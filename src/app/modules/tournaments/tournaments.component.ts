@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import SwiperCore, { SwiperOptions, Navigation, Pagination, Scrollbar, A11y, EffectCards } from 'swiper';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectCards]);
@@ -37,9 +38,12 @@ export class TournamentsComponent implements OnInit {
       quotas: 50,
     }
   ];
-  constructor() { }
+  constructor(
+    private titleService: Title
+  ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Ole Games - Torneos');
   }
 
 }

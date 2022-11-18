@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private titleService: Title) { }
 
   ngOnInit(): void {
-    // this.titleService.setTitle('NUDARA - Centralized Exchange');
+    this.titleService.setTitle('Ole Games - Home');
   }
 
 }
