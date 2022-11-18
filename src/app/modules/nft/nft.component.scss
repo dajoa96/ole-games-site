@@ -1,2 +1,26 @@
 @import 'src/assets/scss/custom-breakpoints.scss';
 @import '~bootstrap/scss/bootstrap-grid';
+
+.app-nft {
+  .list-row,
+  .featured-row {
+    row-gap: 20px;
+  }
+
+  .component-title {
+    margin-bottom: 40px;
+
+    .intro-paraph {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  .results-not-found {
+    font-family: 'Roboto';
+    font-size: 25px;
+    background-color: #1a1039;
+    padding: 30px;
+    text-align: center;
+  }
+}

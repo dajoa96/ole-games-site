@@ -6,8 +6,37 @@
       </div>
     </div>
     <div class="section-divider">
-      <h1 class="title">Adquiere tu NFT</h1>
-      <p class="intro-paraph">¡por tiempo limitado!</p>
+      <div class="component-title">
+        <h1 class="title">Adquiere tu NFT</h1>
+        <p class="intro-paraph mb-0">¡por tiempo limitado!</p>
+      </div>
+      <div class="row featured-row">
+        <div class="col-lg-4" *ngIf="featured">
+          <app-nft-card [data]="featured"></app-nft-card>
+        </div>
+        <div class="col-lg-8">
+          <!--  *ngIf="list && list.length > 0" -->
+          <ng-container *ngIf="(!searchResults) && (list && list.length > 0)">
+            <div class="row list-row">
+              <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4" *ngFor="let item of list">
+                <app-nft-card [data]="item"></app-nft-card>
+              </div>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="searchResults && !searchResults.length">
+            <h2 class="results-not-found">
+              No se encontraron resultados para esta Búsqueda
+            </h2>
+          </ng-container>
+          <ng-container *ngIf="searchResults && searchResults.length">
+            <div class="row list-row">
+              <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4" *ngFor="let item of searchResults">
+                <app-nft-card [data]="item"></app-nft-card>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
     </div>
-  </div>
+    </div>
 </section>
