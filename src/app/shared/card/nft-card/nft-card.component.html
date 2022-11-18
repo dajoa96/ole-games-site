@@ -1,0 +1,36 @@
+<div class="nft-card" [ngClass]="{ 'featured': data?.featured }">
+  <div class="nft-title">
+    {{data?.title}}
+  </div>
+  <ng-container *ngIf="data?.featured">
+    <div class="nft-price-featured">
+      <span>{{data?.price}}</span><span>{{data?.currency}}</span>
+    </div>
+  </ng-container>
+  <div class="nft-image">
+    <img [src]="data?.image || noImage" [alt]="data?.name || 'NFT Image'" class="img-fluid">
+  </div>
+  <div class="nft-data">
+    <ng-container *ngIf="data?.featured">
+      <div class="nft-units">{{data?.units}} Unidades</div>
+      <div class="desbloquea">Desbloquea todos los:</div>
+    </ng-container>
+    <ng-container *ngIf="!data?.featured">
+      <div class="nft-price">
+        <span>{{data?.price}}</span><span>{{data?.currency}}</span>
+      </div>
+    </ng-container>
+    <div class="nft-betting-range">
+      Rangos de Apuesta: {{data?.bettingRange}}
+    </div>
+    <div class="nft-earnings-per-game">
+      Ganancias en Partidas: {{data?.earningsPerGame}}%
+    </div>
+    <div class="nft-earnings-per-tournament">
+      Ganancias en Torneos {{data?.earningsPerTournament}}% del Pool Total de Cada Juego
+    </div>
+  </div>
+  <div class="nft-buy" [ngClass]="{ 'featured': data?.featured }">
+    <button type="button" class="btn primary">Comprar</button>
+  </div>
+</div>
