@@ -5,7 +5,12 @@
   <div class="card__name">
     <p>{{data?.name}}</p>
   </div>
-  <div class="card__position">
+  <div class="card__position mb-2">
     <p>{{data?.position}}</p>
+  </div>
+  <div class="card__link" *ngIf="data?.link">
+    <p class="mb-0">
+      <a [href]="data?.link" target="_blank">Link</a>
+    </p>
   </div>
 </div>

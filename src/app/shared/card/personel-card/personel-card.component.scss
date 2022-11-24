@@ -4,6 +4,7 @@
   border-radius: 20px;
   padding: 60px;
   padding-top: 140px;
+  height: 100%;
   transition: .3s;
 
   &:hover {
@@ -23,7 +24,7 @@
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center;
     }
   }
@@ -40,7 +41,8 @@
     color: #FFFFFF;
   }
 
-  .card__position {
+  .card__position,
+  .card__link * {
     font-weight: 400;
     font-size: 15px;
     line-height: 19px;
