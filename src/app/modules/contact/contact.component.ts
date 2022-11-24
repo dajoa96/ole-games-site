@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { PersonleListMock } from 'src/app/mocks/personel-list.mock';
 
 @Component({
   selector: 'app-contact',
@@ -7,53 +8,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  personel: any[] = [
-    {
-      name: 'Nombre',
-      picture: null,
-      position: 'Cargo',
-    },
-    {
-      name: 'Nombre',
-      picture: null,
-      position: 'Cargo',
-    },
-    {
-      name: 'Nombre',
-      picture: null,
-      position: 'Cargo',
-    },
-    {
-      name: 'Nombre',
-      picture: null,
-      position: 'Cargo',
-    },
-    {
-      name: 'Nombre',
-      picture: null,
-      position: 'Cargo',
-    },
-    {
-      name: 'Nombre',
-      picture: null,
-      position: 'Cargo',
-    },
-    {
-      name: 'Nombre',
-      picture: null,
-      position: 'Cargo',
-    },
-    {
-      name: 'Nombre',
-      picture: null,
-      position: 'Cargo',
-    },
-    {
-      name: 'Nombre',
-      picture: null,
-      position: 'Cargo',
-    }
-  ];
+  personel: any[] = PersonleListMock;
 
   constructor(
     private titleService: Title
